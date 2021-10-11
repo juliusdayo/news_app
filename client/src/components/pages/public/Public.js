@@ -1,8 +1,19 @@
-
+import { Container, Grid } from "@material-ui/core";
+import NewsCard from "../../news/NewsCard";
+import NewsFilter from "../../news/NewsFilter";
 
 const Public = ()=>{
     return(
-        <h1>This is the public Page</h1>
+        <Container>
+            <Grid container spacing={4} wrap="wrap-reverse">
+                <Grid item sm={8}>
+                    <NewsCard/>
+                </Grid>
+                <Grid>
+                    <NewsFilter/>
+                </Grid>
+            </Grid>
+        </Container>
     )
 }
 
