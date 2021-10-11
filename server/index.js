@@ -15,7 +15,7 @@ app.use('/news', newsRoutes);
 
 
 
-const CONNECTION_URL = 'mongodb+srv://volenday:openshiftisdead@oboarding.0wk2r.mongodb.net/myFirstDatabase?retryWrites=true&w=majority;'
+const CONNECTION_URL = 
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology:true})
