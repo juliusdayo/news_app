@@ -1,4 +1,4 @@
-import RichTextEditor from "./RichTextEditor";
+
 import { Card,CardHeader, Container,Paper, CardContent, TextField,Button } from "@material-ui/core";
 import FileBase from 'react-file-base64';
 import {useDispatch} from 'react-redux';
@@ -7,7 +7,7 @@ import { createNews } from "../../../../actions/news";
 import { useEffect } from "react";
 
 const CreateNewsForm =()=>{
-    const [newsData, setNewsData] = useState({ Headline: '', Content:'',FeatureImage:'dasdsa',StartDate:new Date,DatePosted:new Date,PostedBy:'Admin'})
+    const [newsData, setNewsData] = useState({ Headline: '', Content:'',FeatureImage:'',StartDate:new Date,DatePosted:new Date,PostedBy:'Admin'})
     const dispatch = useDispatch();
 
     useEffect(()=>{

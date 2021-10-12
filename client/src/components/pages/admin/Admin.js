@@ -8,7 +8,7 @@ const Admin = () =>{
         <Container>
             
                 <CreateNewsForm/>
-               
+     
           
         </Container>
     )
