@@ -4,7 +4,7 @@ const NewsCard = () =>{
 
     return(
         <Card sx={{display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
-            <CardMedia alt="newsimage"></CardMedia>
+            
             <CardContent>
                 <Typography>
                     Headline
