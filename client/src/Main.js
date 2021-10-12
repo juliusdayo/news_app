@@ -21,7 +21,7 @@ const Main = () =>{
     },[dispatch])
 
     return(
-        <Container>
+        <Container disableGutters={true}>
             <Grid container direction="column" spacing={8}>
                 <Grid item>
                     <Header/>

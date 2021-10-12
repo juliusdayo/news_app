@@ -1,8 +1,14 @@
-
+import { Container} from '@material-ui/core';
+import CreateNewsForm from './form/CreateNewsForm';
 
 const Admin = () =>{
     return(
-        <h1>Admin Page</h1>
+        <Container>
+            
+                <CreateNewsForm/>
+               
+          
+        </Container>
     )
 } 
 
