@@ -1,10 +1,10 @@
 //modules
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import {Container, Grid} from '@material-ui/core';
 import {  BrowserRouter as Router,Switch,Route} from "react-router-dom";
 import {useDispatch} from 'react-redux';
 
-import {getNews} from './actions/news.js'
+import {getNews, getNewsToday} from './actions/news.js'
 
 //components
 import Header from "./components/global-components/Header";
@@ -15,10 +15,17 @@ import Public from "./components/pages/public/Public";
 
 const Main = () =>{
     const dispatch = useDispatch();
+    const [filter,setFilter] = useState({type:'all'});
+    
     
     useEffect(()=>{
+        if(filter.type === 'today'){
+            return dispatch(getNewsToday())
+        }
         dispatch(getNews())
-    },[dispatch])
+    },[filter])
+
+    console.log(filter)
 
 
 
@@ -35,7 +42,7 @@ const Main = () =>{
                                 <Admin />
                             </Route>
                             <Route path="/">
-                                <Public />
+                                <Public setFilter={setFilter}/>
                             </Route>
                         </Switch>
                     </Router>

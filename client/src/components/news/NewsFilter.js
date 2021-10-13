@@ -1,6 +1,7 @@
-import { Paper,Box, CardHeader, CardContent } from "@material-ui/core";
+import { Paper,Box, CardHeader, CardContent,Button } from "@material-ui/core";
+import { getNewsToday } from "../../api";
 
-const NewsFilter = () =>{
+const NewsFilter = ({setFilter}) =>{
 
     return(
         <Box 
@@ -11,7 +12,8 @@ const NewsFilter = () =>{
             <Paper >
                 <CardHeader title="Filter"/>
                 <CardContent>
-                    
+                    <Button onClick={()=> setFilter({type: 'today'})}>News Today</Button>
+                    <Button onClick={()=> setFilter({type: 'all'})}>All News</Button>
                 </CardContent>
             </Paper>
         </Box>
