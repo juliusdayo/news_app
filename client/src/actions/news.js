@@ -18,6 +18,15 @@ export const getNews = () => async(dispatch)=>{
    
 
 }
+export const getNewsToday = (date) = async (dispatch)=>{
+
+    try{
+        const {data} = await api.getNewsToday(date);
+        dispatch({type:'FETCH_TODAY',payload:data})
+    }catch(error){
+        console.log(error)
+    }
+}
 
 
 export const createNews = (news) => async(dispatch)=>{

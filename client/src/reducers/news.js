@@ -4,6 +4,8 @@ const news = (news = [], action)=>{
             return news.map((n)=> n._id === action.payload._id ? action.payload: n);
         case "FETCH_ALL":
             return action.payload;
+        case "FETCH_TODAY":
+            return action.payload;
         case 'CREATE':
             return [...news,action.payload];
         

@@ -14,13 +14,20 @@ export const getNews = async (req,res) =>{
 }
 
 export const getNewsToday = async(req,res)=>{
+
+    const dateTom = new Date().setDate(new Date().getDate() +1);
+    
     try {
+        console.log(new Date)
+        console.log(dateTom)
         const news = await NewsModel.find({
             DatePosted:{
-                $gte: new Date().toLocaleDateString(),
+                $gte: new Date().toDateString(),
+                 $lt: new Date(dateTom).toDateString()
 
             }
         });
+        res.status(200).json(news)
     } catch (error) {
         console.log(error)
     }

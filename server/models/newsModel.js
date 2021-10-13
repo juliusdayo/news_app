@@ -11,7 +11,7 @@ const newsModel = mongoose.Schema({
     },
     DatePosted:{
         type:Date,
-        default:new Date
+        default:new Date()
     },
     PostedBy: String
 })
