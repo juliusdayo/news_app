@@ -13,6 +13,19 @@ export const getNews = async (req,res) =>{
     }
 }
 
+export const getNewsToday = async(req,res)=>{
+    try {
+        const news = await NewsModel.find({
+            DatePosted:{
+                $gte: new Date().toLocaleDateString(),
+
+            }
+        });
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 export const createNews = async (req,res)=>{
     const news = req.body;
 

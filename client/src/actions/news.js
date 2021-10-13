@@ -19,6 +19,7 @@ export const getNews = () => async(dispatch)=>{
 
 }
 
+
 export const createNews = (news) => async(dispatch)=>{
     try {
         const {data} = await api.createNews(news);

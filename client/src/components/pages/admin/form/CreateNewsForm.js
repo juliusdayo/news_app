@@ -52,6 +52,13 @@ const CreateNewsForm =()=>{
                                         onDone={({base64}) => setNewsData({...newsData, FeatureImage: base64})}/>
                             </Grid>
                             <Grid item>
+                                
+                                <TextField label="Date Posted" value={newsData.DatePosted} vairant="outlined" 
+                                name="DatePosted" 
+                                type="date"
+                                onChange={(event)=>setNewsData({...newsData,DatePosted:event.target.value})}
+                                InputLabelProps={{ shrink: true }} />
+
                                 <TextField label="Posted By" defaultValue="Admin" name="PostedBy" disabled/>
                             </Grid>
                         </Grid>

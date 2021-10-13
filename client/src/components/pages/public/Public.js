@@ -28,7 +28,7 @@ const Public = ()=>{
                     )}
                 </Grid>
             
-                <Grid justifyContent="center">
+                <Grid justifyContent="center" xs={3}>
                     <NewsFilter/>
                 </Grid>
             </Grid>
