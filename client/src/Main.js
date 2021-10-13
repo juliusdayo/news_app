@@ -20,6 +20,8 @@ const Main = () =>{
         dispatch(getNews())
     },[dispatch])
 
+
+
     return(
         <Container disableGutters={true}>
             <Grid container direction="column" spacing={8}>

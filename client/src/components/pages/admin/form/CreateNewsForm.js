@@ -33,7 +33,10 @@ const CreateNewsForm =()=>{
                        value={newsData.Headline}
                         onChange={(event)=>setNewsData({...newsData, Headline:event.target.value})}
                         />
-                       <TextField label="Content" name="Content" />
+                       <TextField 
+                       label="Content" 
+                       name="Content" 
+                       onChange={(event)=>setNewsData({...newsData, Content:event.target.value})}/>
                        <FileBase 
                             type="file"
                             multiple={false}
