@@ -1,12 +1,12 @@
 # news_app
 
 ###Tasks Done
-    * **CREATE**
-    * **READ**
-    * **DELETE**
-    * **ADMIN and PUBLIC VIEW**
-    * **NEWS CARD DESIGN**
+    1. **CREATE**
+    2. **READ**
+    3. **DELETE**
+    4. **ADMIN and PUBLIC VIEW**
+    5. **NEWS CARD DESIGN**
 
 ###Ongoing Tasks
-    * **FILTER**
-    * **UPDATE**
+    1. **FILTER**
+    2. **UPDATE**
