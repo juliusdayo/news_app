@@ -6,10 +6,9 @@
 3. **DELETE**
 4. **ADMIN and PUBLIC VIEW**
 5. **NEWS CARD DESIGN**
-
+6. **FILTER**
 ### Ongoing Tasks
-1. **FILTER**
-2. **UPDATE**
+1. **UPDATE**
 
 ### To Be Done
 1. **Form Validation**
