@@ -2,7 +2,7 @@ import { Card, CardContent, CardMedia, Typography,Box } from "@material-ui/core"
 
 const NewsCard = ({news}) =>{
 
-    const id = news._id
+    
     const Headline = news.Headline
     const Content = news.Content
     const FeatureImage = news.FeatureImage

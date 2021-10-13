@@ -27,3 +27,13 @@ export const createNews = (news) => async(dispatch)=>{
         console.log(error);
     }
 }
+
+export const deleteNews = (id) => async(dispatch)=>{
+    try {
+        await api.deleteNews(id);
+        dispatch({type:'DELETE', payload:id})
+    } catch (error) {
+        console.log(id)
+        console.log(error)
+    }
+}

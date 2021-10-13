@@ -7,7 +7,7 @@ import { createNews } from "../../../../actions/news";
 import { useEffect } from "react";
 
 const CreateNewsForm =()=>{
-    const [newsData, setNewsData] = useState({ Headline: '', Content:'',FeatureImage:'',StartDate:new Date,DatePosted:new Date,PostedBy:'Admin'})
+    const [newsData, setNewsData] = useState({ Headline: '', Content:'',FeatureImage:'',StartDate:new Date(),DatePosted:new Date(),PostedBy:'Admin'})
     const dispatch = useDispatch();
 
     useEffect(()=>{

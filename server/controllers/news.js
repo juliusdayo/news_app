@@ -28,7 +28,7 @@ export const createNews = async (req,res)=>{
 }
 
 export const deleteNews = async (req,res)=>{
-    const {id} = req.body;
+    const {id} = req.params;
     
     if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('It ain\'t a mongoose model');
 

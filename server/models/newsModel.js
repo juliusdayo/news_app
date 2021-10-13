@@ -4,10 +4,7 @@ import mongoose from 'mongoose';
 const newsModel = mongoose.Schema({
     Headline: String,
     Content: String,
-    FeatureImage: {
-        data: Buffer,
-        contentType: String,
-    },
+    FeatureImage: String,
     StartDate:{
         type:Date,
         default: new Date()

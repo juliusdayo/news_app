@@ -21,11 +21,11 @@ const Public = ()=>{
         <Container>
             <Grid container spacing={4} wrap="wrap-reverse">
                 <Grid item sm={8}>
-                    <Grid container spacing={4}>
+                    <Grid container spacing={4} justifyContent="center">
                        {NewsContent}
                     </Grid>
                 </Grid>
-                <Grid>
+                <Grid justifyContent="center">
                     <NewsFilter/>
                 </Grid>
             </Grid>
