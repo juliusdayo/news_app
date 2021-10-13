@@ -6,7 +6,7 @@ const newsModel = mongoose.Schema({
     Content: String,
     FeatureImage: {
         data: Buffer,
-        contentType: String
+        contentType: String,
     },
     StartDate:{
         type:Date,

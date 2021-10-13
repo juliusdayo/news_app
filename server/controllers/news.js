@@ -1,3 +1,4 @@
+import mongoose from 'mongoose';
 import NewsModel from "../models/newsModel.js"
 
 
@@ -7,6 +8,7 @@ export const getNews = async (req,res) =>{
         
         res.status(200).json(news)
     } catch (error) {
+        console.log(error)
         res.status(404).json({message:error})
     }
 }
@@ -23,4 +25,15 @@ export const createNews = async (req,res)=>{
     } catch (error) {
         res.status(409).json({message:error.message})
     }
+}
+
+export const deleteNews = async (req,res)=>{
+    const {id} = req.body;
+    
+    if(!mongoose.Types.ObjectId.isValid(id)) return res.status(404).send('It ain\'t a mongoose model');
+
+    await NewsModel.findByIdAndDelete(id);
+
+    res.json({mesage: 'Deleted Successfully'})
+
 }
