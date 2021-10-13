@@ -11,12 +11,7 @@ const Public = ()=>{
 
     
 
-    const NewsContent = news.map((news, key) =>
-        <Grid item key={news._id}>
-            <NewsCard news={news}/>
-        </Grid>
-    )
-    console.log(news)
+    
     return(
         
         <Container>                  
@@ -24,7 +19,11 @@ const Public = ()=>{
                 <Grid item sm={8} > 
                 {!news.length ? <LinearProgress/> :(                   
                     <Grid container spacing={4} justifyContent="center">
-                       {NewsContent}
+                       {news.map((news, key) =>
+                            <Grid item key={news._id}>
+                                <NewsCard news={news}/>
+                            </Grid>
+                        )}
                     </Grid>
                     )}
                 </Grid>
