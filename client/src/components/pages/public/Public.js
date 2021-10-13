@@ -9,8 +9,9 @@ import NewsFilter from "../../news/NewsFilter";
 const Public = ()=>{
     const news = useSelector((state)=>state.news);
 
-    
-
+    const dateTom = new Date().setDate(new Date().getDate() +1);
+        console.log(new Date())
+        console.log(new Date(dateTom).toDateString())
     
     return(
         

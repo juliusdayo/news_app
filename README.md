@@ -10,3 +10,8 @@
 ### Ongoing Tasks
 1. **FILTER**
 2. **UPDATE**
+
+### To Be Done
+1. **Form Validation**
+2. **Form RichText**
+3. **Form Reworlk**

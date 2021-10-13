@@ -58,6 +58,12 @@ const CreateNewsForm =()=>{
                                 type="date"
                                 onChange={(event)=>setNewsData({...newsData,DatePosted:event.target.value})}
                                 InputLabelProps={{ shrink: true }} />
+                                <TextField label="Start Date" value={newsData.StartDate} vairant="outlined" 
+                                name="StartDate" 
+                                type="date"
+                                onChange={(event)=>setNewsData({...newsData,StartDate:event.target.value})}
+                                InputLabelProps={{ shrink: true }} />
+
 
                                 <TextField label="Posted By" defaultValue="Admin" name="PostedBy" disabled/>
                             </Grid>
