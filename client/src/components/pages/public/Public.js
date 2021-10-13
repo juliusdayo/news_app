@@ -1,4 +1,4 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, LinearProgress } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 import NewsCard from "../../news/NewsCard";
@@ -18,13 +18,17 @@ const Public = ()=>{
     )
     console.log(news)
     return(
-        <Container>
-            <Grid container spacing={4} wrap="wrap-reverse">
-                <Grid item sm={8}>
+        
+        <Container>                  
+            <Grid container spacing={4} wrap="wrap-reverse">          
+                <Grid item sm={8} > 
+                {!news.length ? <LinearProgress/> :(                   
                     <Grid container spacing={4} justifyContent="center">
                        {NewsContent}
                     </Grid>
+                    )}
                 </Grid>
+            
                 <Grid justifyContent="center">
                     <NewsFilter/>
                 </Grid>
