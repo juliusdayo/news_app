@@ -1,4 +1,4 @@
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid, LinearProgress } from "@material-ui/core";
 import { useSelector } from "react-redux";
 
 import NewsCard from "../../news/NewsCard";
@@ -11,21 +11,24 @@ const Public = ()=>{
 
     
 
-    const NewsContent = news.map((news, key) =>
-        <Grid item key={news._id}>
-            <NewsCard news={news}/>
-        </Grid>
-    )
-    console.log(news)
+    
     return(
-        <Container>
-            <Grid container spacing={4} wrap="wrap-reverse">
-                <Grid item sm={8}>
-                    <Grid container spacing={4}>
-                       {NewsContent}
+        
+        <Container>                  
+            <Grid container spacing={4} wrap="wrap-reverse">          
+                <Grid item sm={8} > 
+                {!news.length ? <LinearProgress/> :(                   
+                    <Grid container spacing={4} justifyContent="center">
+                       {news.map((news, key) =>
+                            <Grid item key={news._id}>
+                                <NewsCard news={news}/>
+                            </Grid>
+                        )}
                     </Grid>
+                    )}
                 </Grid>
-                <Grid>
+            
+                <Grid justifyContent="center" xs={3}>
                     <NewsFilter/>
                 </Grid>
             </Grid>

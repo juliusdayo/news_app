@@ -1,9 +1,20 @@
-
+import { Paper,Box, CardHeader, CardContent } from "@material-ui/core";
 
 const NewsFilter = () =>{
 
     return(
-        <h3>This is the filter</h3>
+        <Box 
+        sx={{
+            m:4,
+            width:'100%' 
+        }}>
+            <Paper >
+                <CardHeader title="Filter"/>
+                <CardContent>
+                    
+                </CardContent>
+            </Paper>
+        </Box>
     )
 }
 

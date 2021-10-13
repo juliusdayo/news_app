@@ -1,27 +1,51 @@
-import { Card, CardContent, CardMedia, Typography,Box } from "@material-ui/core"
+import { Card, CardContent, CardMedia, Typography,Box,Grid, Divider } from "@material-ui/core"
 
 const NewsCard = ({news}) =>{
 
-    const id = news._id
-    const Headline = news.Headline
-    const Content = news.Content
-    const FeatureImage = news.FeatureImage
+    
+    const convertDate=(date)=>{
+        return (new Date(date).toLocaleDateString())
+    }
+    
     return(
         <Box sx={{
-            width: 300,
-            height: 300,}}>
-        <Card sx={{display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>
+            width: '90%',
+            height :'40%',
+            m:2}} >
+        <Card >
             
             <CardContent>
-                <Typography>
-                    {Headline}
-                </Typography>
-                <CardMedia image={FeatureImage} alt={Headline} component="img"/>
-                <Typography>
-                    {Content}
-                </Typography>
-               
-                
+                <Grid container direction="column" spacing={1}>
+                                      
+                    <Grid item container direction="row" spacing={2}>
+                        <Grid item sm={6}>
+                             <CardMedia image={news.FeatureImage} alt={news.Headline} component="img" width="40%"/>
+                        </Grid>
+                        <Grid item sm>
+                        <Typography variant="h5">
+                            {news.Headline}
+                        </Typography>
+                            <Typography paragraph variant="body2">
+                                 {news.Content}
+                            </Typography>
+                         </Grid>
+                     </Grid>
+                     
+                     <Grid item container justifyContent="space-between" >
+                        <Divider/>
+                        <Grid item >
+                            <Typography variant="overline" >
+                                {convertDate(news.DatePosted)}
+                            </Typography>
+                        </Grid>
+                        <Grid item>
+                            <Typography variant="subtitle1">
+                                {'Author: '+news.PostedBy}
+                            </Typography>
+                        </Grid>
+                     </Grid>
+                     
+                </Grid>
             </CardContent>
         </Card>
         </Box>
