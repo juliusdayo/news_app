@@ -6,12 +6,10 @@ import NewsFilter from "../../news/NewsFilter";
 
 
 
-const Public = ()=>{
+const Public = ({setFilter})=>{
     const news = useSelector((state)=>state.news);
 
-    const dateTom = new Date().setDate(new Date().getDate() +1);
-        console.log(new Date())
-        console.log(new Date(dateTom).toDateString())
+    
     
     return(
         
@@ -30,7 +28,7 @@ const Public = ()=>{
                 </Grid>
             
                 <Grid justifyContent="center" xs={3}>
-                    <NewsFilter/>
+                    <NewsFilter setFilter={setFilter}/>
                 </Grid>
             </Grid>
         </Container>

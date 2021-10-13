@@ -7,7 +7,7 @@ const router = express.Router();
 
 
 router.get('/', getNews)
-router.get('/:date', getNewsToday)
+router.get('/today', getNewsToday)
 router.post('/', createNews)
 router.delete('/:id', deleteNews)
 
