@@ -2,7 +2,7 @@
 
 ###Tasks Done
     1. **CREATE**
-    2. **READ**
+    1. **READ**
     3. **DELETE**
     4. **ADMIN and PUBLIC VIEW**
     5. **NEWS CARD DESIGN**
