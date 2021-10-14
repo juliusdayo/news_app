@@ -10,7 +10,6 @@ const Public = ({setFilter})=>{
     const news = useSelector((state)=>state.news);
 
     
-    
     return(
         
         <Container>                  
@@ -20,14 +19,14 @@ const Public = ({setFilter})=>{
                     <Grid container spacing={4} justifyContent="center">
                        {news.map((news, key) =>
                             <Grid item key={news._id}>
-                                <NewsCard news={news}/>
+                                <NewsCard news={news} />
                             </Grid>
                         )}
                     </Grid>
                     )}
                 </Grid>
             
-                <Grid justifyContent="center" xs={3}>
+                <Grid justifyContent="center" xs={4}>
                     <NewsFilter setFilter={setFilter}/>
                 </Grid>
             </Grid>
