@@ -20,12 +20,14 @@ const Main = () =>{
     
     useEffect(()=>{
         if(filter.type === 'today'){
+           
             return dispatch(getNewsToday())
+            
         }
+        
         dispatch(getNews())
     },[filter])
-
-    console.log(filter)
+   
 
 
 

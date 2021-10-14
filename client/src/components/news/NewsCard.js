@@ -1,8 +1,11 @@
 import { Card, CardContent, CardMedia, Typography,Box,Grid, Divider } from "@material-ui/core"
+import { EditorState,convertFromRaw } from "draft-js"
+import { useState } from "react"
 
 const NewsCard = ({news}) =>{
+   
+   
 
-    
     const convertDate=(date)=>{
         return (new Date(date).toLocaleDateString())
     }

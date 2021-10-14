@@ -14,3 +14,6 @@
 1. **Form Validation**
 2. **Form RichText**
 3. **Form Reworlk**
+4. **Breaking Down of Components**
+### Needs env file to run the server
+### Uses port 3000 and 5000 

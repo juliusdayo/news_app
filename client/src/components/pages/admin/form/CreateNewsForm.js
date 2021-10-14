@@ -2,18 +2,24 @@
 import { Card,CardHeader, Container,Paper, CardContent, TextField,Button,Grid, CardMedia,Box } from "@material-ui/core";
 import FileBase from 'react-file-base64';
 import {useDispatch} from 'react-redux';
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { createNews } from "../../../../actions/news";
-import { useEffect } from "react";
+
+import RichTextEditor from "./RichTextEditor";
 
 const CreateNewsForm =()=>{
     const [newsData, setNewsData] = useState({ Headline: '', Content:'',FeatureImage:'',StartDate:new Date(),DatePosted:new Date(),PostedBy:'Admin'})
+   
+   
+    
     const dispatch = useDispatch();
 
     useEffect(()=>{
         console.log(newsData)
+        
     },[newsData]);
 
+    
     const handleSubmit = (e) =>{
         e.preventDefault();
         dispatch(createNews(newsData))
@@ -37,10 +43,7 @@ const CreateNewsForm =()=>{
                                     />
                             </Grid>
                             <Grid item>
-                                <TextField 
-                                label="Content" 
-                                name="Content" 
-                                onChange={(event)=>setNewsData({...newsData, Content:event.target.value})}/>
+                                <RichTextEditor newsData={newsData} setNewsData={setNewsData} />
                             </Grid>
                             <Grid item container direction="column">
                                 <Box sx={{width: 400,height: 200,}}>
