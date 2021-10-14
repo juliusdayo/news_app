@@ -1,5 +1,5 @@
 import { Paper,Box, CardHeader, CardContent,Button } from "@material-ui/core";
-import { getNewsToday } from "../../api";
+
 
 const NewsFilter = ({setFilter}) =>{
 
