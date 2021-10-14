@@ -1,5 +1,5 @@
 
-import { Card,CardHeader, Container,Paper, CardContent, TextField,Button,Grid, CardMedia,Box } from "@material-ui/core";
+import { Card,CardHeader, Container,Paper, CardContent, TextField,Button,Grid, CardMedia,Box, TextareaAutosize, InputLabel, FormControl, FormControlLabel } from "@material-ui/core";
 import FileBase from 'react-file-base64';
 import {useDispatch} from 'react-redux';
 import { useState } from "react";
@@ -37,14 +37,19 @@ const CreateNewsForm =()=>{
                                     />
                             </Grid>
                             <Grid item>
-                                <TextField 
-                                label="Content" 
-                                name="Content" 
-                                onChange={(event)=>setNewsData({...newsData, Content:event.target.value})}/>
+                              
+                                   
+                               <InputLabel for="Content"/>
+                                <TextareaAutosize 
+                                placeholder="Content"
+                                id="Content" 
+                                minRows={3} 
+                                style={{ width: 400 }} onChange={(event)=>setNewsData({...newsData, Content:event.target.value})}/>
+                                
                             </Grid>
                             <Grid item container direction="column">
                                 <Box sx={{width: 400,height: 200,}}>
-                                    <CardMedia component="img" image={newsData.FeatureImage} height="200"/>
+                                    <CardMedia placeholder="Select Image" component="img" image={newsData.FeatureImage} height="200"/>
                                 </Box>
                                 <FileBase 
                                         type="file"
