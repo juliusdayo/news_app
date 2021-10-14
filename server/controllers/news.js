@@ -4,7 +4,7 @@ import NewsModel from "../models/newsModel.js"
 
 export const getNews = async (req,res) =>{
     try {
-        const news = await NewsModel.find({}).sort({DatePosted:-1});
+        const news = await NewsModel.find({}).sort({StartDate:-1});
         
         res.status(200).json(news)
     } catch (error) {
@@ -25,7 +25,7 @@ export const getNewsToday = async(req,res)=>{
                  $lt: new Date(dateTom).toDateString()
 
             }
-        });
+        }).sort({StartDate:-1});
         res.status(200).json(news)
     } catch (error) {
         console.log(error)

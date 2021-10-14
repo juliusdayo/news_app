@@ -27,9 +27,9 @@ const Main = () =>{
         
         dispatch(getNews())
 
-    },[dispatch])
+    },[filter,dispatch])
 
-    
+    console.log(filter)
 
 
 

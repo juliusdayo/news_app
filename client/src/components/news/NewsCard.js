@@ -1,6 +1,5 @@
 import { Card, CardContent, CardMedia, Typography,Box,Grid, Divider } from "@material-ui/core"
-import { EditorState,convertFromRaw } from "draft-js"
-import { useState } from "react"
+
 
 const NewsCard = ({news}) =>{
    
@@ -14,7 +13,8 @@ const NewsCard = ({news}) =>{
         <Box sx={{
             width: '90%',
             height :'40%',
-            m:2}} >
+            m:2,
+            }} >
         <Card >
             
             <CardContent>
@@ -22,14 +22,18 @@ const NewsCard = ({news}) =>{
                                       
                     <Grid item container direction="row" spacing={2}>
                         <Grid item sm={6}>
-                             <CardMedia image={news.FeatureImage} alt={news.Headline} component="img" width="40%"/>
+                             <CardMedia image={news.FeatureImage}  alt={news.Headline} component="img" width="40%"/>
                         </Grid>
                         <Grid item xs>
                         <Typography variant="h5">
                             {news.Headline}
                         </Typography>
                         
-                            <Typography paragraph variant="body2"  style={{ wordWrap: 'break-word' }}>
+                            <Typography paragraph variant="body2"  
+                            style={{overflowX:'hidden',
+                                    maxHeight:300,
+                                    
+                            }}>
                                  {news.Content}
                             </Typography>
                        
