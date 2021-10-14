@@ -39,7 +39,10 @@ const CreateNewsForm =()=>{
                             <Grid item>
                                 <TextField 
                                 label="Content" 
-                                name="Content" 
+                                variant="outlined"
+                                fullWidth
+                                multiline 
+                                rows={10}
                                 onChange={(event)=>setNewsData({...newsData, Content:event.target.value})}/>
                             </Grid>
                             <Grid item container direction="column">

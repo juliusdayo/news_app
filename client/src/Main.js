@@ -23,7 +23,7 @@ const Main = () =>{
             return dispatch(getNewsToday())
         }
         dispatch(getNews())
-    },[filter])
+    },[dispatch])
 
     console.log(filter)
 
