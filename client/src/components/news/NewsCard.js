@@ -24,13 +24,15 @@ const NewsCard = ({news}) =>{
                         <Grid item sm={6}>
                              <CardMedia image={news.FeatureImage} alt={news.Headline} component="img" width="40%"/>
                         </Grid>
-                        <Grid item sm>
+                        <Grid item xs>
                         <Typography variant="h5">
                             {news.Headline}
                         </Typography>
-                            <Typography paragraph variant="body2">
+                        
+                            <Typography paragraph variant="body2"  style={{ wordWrap: 'break-word' }}>
                                  {news.Content}
                             </Typography>
+                       
                          </Grid>
                      </Grid>
                      

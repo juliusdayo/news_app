@@ -43,7 +43,9 @@ const CreateNewsForm =()=>{
                                     />
                             </Grid>
                             <Grid item>
+
                                 <RichTextEditor newsData={newsData} setNewsData={setNewsData} />
+
                             </Grid>
                             <Grid item container direction="column">
                                 <Box sx={{width: 400,height: 200,}}>

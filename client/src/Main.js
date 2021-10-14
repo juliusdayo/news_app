@@ -26,8 +26,11 @@ const Main = () =>{
         }
         
         dispatch(getNews())
-    },[filter])
-   
+
+    },[dispatch])
+
+    
+
 
 
 
